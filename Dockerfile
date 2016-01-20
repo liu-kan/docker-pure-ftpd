@@ -2,7 +2,7 @@
 FROM debian:jessie
 
 # feel free to change this ;)
-MAINTAINER Andrew Stilliard <andrew.stilliard@gmail.com>
+MAINTAINER Kan Liu
 
 # properly setup debian sources
 ENV DEBIAN_FRONTEND noninteractive
