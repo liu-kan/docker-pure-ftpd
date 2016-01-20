@@ -111,9 +111,10 @@ This is for PASV support, please see: [#5 PASV not fun :)](https://github.com/st
 
 
 Development (via git clone)
+----------------------------
 ```bash
 # Clone the repo
-git clone https://github.com/stilliard/docker-pure-ftpd.git
+git clone https://github.com/liu-kan/docker-pure-ftpd.git
 cd docker-pure-ftpd
 # Build the image
 make build
@@ -122,6 +123,14 @@ make run
 # enter a bash shell insdie the container:
 make enter
 ```
+
+To persist user list
+-------------
+```bash
+docker run -d --name ftpd_server -v /data/ftpdata:/home/ftpusers -v /data/ftpconfig:/etc/pure-ftpd -v /tmp:/tmp \
+		-p 21:21 -p 30000-30009:30000-30009 -e "PUBLICHOST=localhost" pure-ftp-k
+```
+
 
 Credits
 -------------
